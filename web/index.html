@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Showcase</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="topwrap">
+  <header class="top">
+    <div>
+      <h1 id="title">Team Showcase</h1>
+      <p id="meta" class="muted"></p>
+    </div>
+    <div class="actions">
+      <span id="whoami" class="muted" hidden></span>
+      <button id="activityBtn" class="btn ghost" title="Who changed what, and when">Activity</button>
+      <button id="editBtn" class="btn ghost">&#9998; Edit</button>
+      <button id="execBtn" class="btn ghost">Executive view</button>
+      <button id="printBtn" class="btn ghost" title="Print or save as PDF">Print</button>
+      <button id="logoutBtn" class="btn ghost" hidden>Sign out</button>
+      <a id="signinLink" class="btn ghost" href="/login" hidden>Sign in</a>
+    </div>
+  </header>
+  <nav class="tabs" id="tabs">
+    <button data-view="overview" class="active">Overview</button>
+    <button data-view="owners">Team</button>
+    <button data-view="pillars">Pillars</button>
+    <button data-view="milestones">Milestones &amp; Wins</button>
+    <button data-view="items">Items</button>
+    <button data-view="jordan" id="jordanTab" hidden>Jordan</button>
+  </nav>
+</div>
+
+<div id="editBanner" class="edit-banner" hidden>Edit mode: click any card or table row to change it, or use the + buttons to add new ones.</div>
+
+<section class="filters" id="filters">
+  <input id="search" type="search" placeholder="Search items, owners, notes, dates, wins...">
+  <button id="fToggle" class="btn ghost" aria-expanded="false" aria-controls="fPanel">Filters <span id="fBadge" class="badge" hidden></span></button>
+  <div id="chips" class="chips"></div>
+  <span id="count" class="muted"></span>
+  <div id="fPanel" class="fpanel" hidden>
+    <select id="fPillar"><option value="">All pillars</option></select>
+    <select id="fOwner"><option value="">All owners</option></select>
+    <select id="fStatus"><option value="">All statuses</option></select>
+    <select id="fRegion"><option value="">All regions</option></select>
+    <select id="fArea"><option value="">All areas</option></select>
+    <label class="chk"><input id="fPriority" type="checkbox"> Priorities only</label>
+    <label class="chk"><input id="fThisWeek" type="checkbox"> Working this week</label>
+    <label class="chk"><input id="fOverdue" type="checkbox"> Overdue only</label>
+    <label class="chk"><input id="fAttention" type="checkbox"> Needs attention</label>
+    <button id="fClear" class="btn ghost sm">Clear all</button>
+  </div>
+</section>
+
+<main id="view"></main>
+<dialog id="dlg"></dialog>
+<div id="scrim" class="scrim" hidden></div>
+<aside id="activity" class="act-drawer" aria-label="Recent activity" hidden>
+  <header>
+    <h2>Recent activity</h2>
+    <button id="activityClose" class="btn ghost sm" aria-label="Close activity">&times;</button>
+  </header>
+  <div id="activityKinds" class="qpills"></div>
+  <div id="activityBody" class="act-body"></div>
+</aside>
+
+<script src="/app.js"></script>
+</body>
+</html>

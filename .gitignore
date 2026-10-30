@@ -1,0 +1,7 @@
+.env
+__pycache__/
+data/*.tmp
+data/*.bak.json
+data/jordan.json
+data/users.json
+data/.session_secret

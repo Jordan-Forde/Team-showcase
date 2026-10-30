@@ -1,0 +1,43 @@
+[
+ {
+  "date": "2026-10-29",
+  "total": 139,
+  "status": {
+   "Red": 4,
+   "Amber": 131,
+   "Green": 4,
+   "Done": 0
+  },
+  "pillars": {
+   "P1": {
+    "Red": 3,
+    "Amber": 44,
+    "Green": 0,
+    "Done": 0
+   },
+   "P2": {
+    "Red": 0,
+    "Amber": 21,
+    "Green": 1,
+    "Done": 0
+   },
+   "P3": {
+    "Red": 0,
+    "Amber": 24,
+    "Green": 0,
+    "Done": 0
+   },
+   "P4": {
+    "Red": 1,
+    "Amber": 42,
+    "Green": 3,
+    "Done": 0
+   }
+  },
+  "priorities": 29,
+  "overdue": 0,
+  "wins": 15,
+  "milestonesDone": 1,
+  "milestonesTotal": 6
+ }
+]
